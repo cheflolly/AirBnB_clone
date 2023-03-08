@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-""" Define class User that inherits from BaseModel """
+
 from models.base_model import BaseModel
 
-
 class User(BaseModel):
-    """ Representation of a user """
+    """ A user class that inherits the BaseModel"""
 
-    # public class attributes
     email = ""
     password = ""
     first_name = ""
     last_name = ""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args,  **kwargs)
